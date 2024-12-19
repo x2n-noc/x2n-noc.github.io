@@ -1,0 +1,98 @@
+:root{
+--primary-color: rgb(255, 0, 0);
+--secondary-color: rgb(66, 73, 107);
+}
+
+html{
+    background-image: linear-gradient(
+    to bottom right, 
+    rgba(255, 0, 0, 0.33) 30%, 
+    rgba(255, 255, 0, 0.232) 80%,
+    rgba(0, 128, 0, 0.414) 100%);
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding:.75em 2.5em 0 2.5em;
+    box-sizing: border-box;
+}
+
+title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#section-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* height: 40vh; */
+}
+
+#section-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin: auto;
+    padding: 0 0 1vh 0;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+details{
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 0.5em 0.5em;
+}
+
+summary{
+    font-size: xx-large;
+    cursor: pointer;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+summary:hover{
+    color: white;
+}
+
+details:hover{
+    background-color: var(--secondary-color);
+}
+
+details[open]{
+    padding: 0.5em;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+ul{
+    background-color: rgb(30, 36, 72);
+    border-radius: 4px;
+    list-style-type: "📡 ";
+}
+
+li{
+    padding: 1vh 0 1vh 0;
+    width: 100%;
+}
+
+li:hover{
+    cursor: pointer;
+    background-color:white;
+    border-radius: 4px;
+}
+
+li:hover a{
+    cursor: pointer;
+    color: var(--secondary-color);
+    background-color:white;
+    border-radius: 4px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
