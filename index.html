@@ -11,7 +11,28 @@
     <h1>Firmware Downloads</h1>
 
     <div id="section-container">
-      <div id="section-box">
+      <script>
+        const fs = require("fs");
+        const path = require("path");
+
+        folder = "./testing_repo";
+
+        conatiner = document.getElementById("section-conatainer");
+
+        fs.readdirSync(folder).forEach((sub_folder) => {
+          box = document.createElement("div").setAttribute("id", "section-box");
+
+          sub_folder.forEach((file) => {
+            details = document.createElement("details");
+            summary = document
+              .createElement("summary")
+              .setAttribute("innerText", `${sub_folder}`);
+          });
+
+          conatiner.appendChild(box);
+        });
+      </script>
+      <!-- <div id="section-box">
         <details>
           <summary>OneWeb Support Files</summary>
           <ul id="firmware-list">
@@ -26,9 +47,25 @@
         <details>
           <summary>Remote Troubleshooting Tools</summary>
           <ul id="firmware-list">
-            <li id="firmware-item"><a> File </a></li>
-            <li id="firmware-item"><a> File </a></li>
-            <li id="firmware-item"><a> File </a></li>
+            <li id="firmware-item">
+              <a
+                href="https://get.anydesk.com/KoCtoqHS/IPAccessRemoteSupport.exe"
+              >
+                AnyDesk Remote Support Client (Windows)</a
+              >
+            </li>
+            <li id="firmware-item">
+              <a
+                href="https://get.anydesk.com/mpVpPYtR/IPAccessRemoteSupport.dmg"
+              >
+                AnyDesk Remote Support Client (Mac)
+              </a>
+            </li>
+            <li id="firmware-item">
+              <a href="https://downloads.ipinternational.net/TeamViewerQS.exe">
+                TeamViewer QuickSupport
+              </a>
+            </li>
           </ul>
         </details>
       </div>
@@ -63,7 +100,7 @@
             <li id="firmware-item"><a> File </a></li>
           </ul>
         </details>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
